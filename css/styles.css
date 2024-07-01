@@ -1,0 +1,272 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: white;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+section {
+    padding: 120px 0;
+}
+
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #4d5ae5;
+    margin-right: 76px
+}
+
+.logo-studio-dark {
+    color: #2e2f42;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 40px; 
+}
+
+.navigation-menu .link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+
+}
+
+.navigation-menu .link:hover,
+.navigation-menu .link:active,
+.navigation-menu .link:focus {
+    color: #404BBF;
+}
+
+.contacts-list {
+    font-style: normal;
+    display: flex; 
+    gap: 40px;
+    padding: 24px 0;
+}
+
+.contacts .link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.contacts .link:hover,
+.contacts .link:active,
+.contacts .link:focus {
+    color: #404BBF;
+}
+
+.hero {
+    background-color: #2e2f42;
+    padding: 188px 0;
+}
+
+.hero-title {
+    font-size: 56px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.07;
+    color: #ffffff;
+    margin: 0 auto 48px auto;
+    max-width: 496px
+}
+
+.hero-button {
+    color: white;
+    background-color: #4D5AE5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 4px;
+    min-width: 169px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #404BBF;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.feature .subtitle {
+    margin-bottom: 8px;
+}
+
+.feature-list {
+    display: flex;
+    gap: 24px;
+}
+
+.feature-item {
+    width: calc((100% - 72px) / 4);
+}
+
+.team {
+    background-color: #F4F4FD;
+}
+
+.team .title {
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+.team-list-item {
+    background-color: #FFFFFF;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0 0 4px 4px;
+}
+
+.team-card-text {
+    text-align: center;
+    padding: 32px 0;
+    width: 264px;
+}
+
+.team .subtitle {
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 8px
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #2e2f42;
+    letter-spacing: 0.02em;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+
+.footer {
+    background-color: #2e2f42;
+}
+
+.logo-studio-white {
+    color: #f4f4fd;
+}
+
+.footer .text {
+    color: #F4F4FD;
+}
+
+.portfolio .title {
+    margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio-card-text {
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    padding: 32px 16px;
+}
+
+.portfolio-card-text .subtitle {
+    margin-bottom: 8px;
+}
+
+.footer {
+    padding: 100px 0;
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer .text {
+    max-width: 264px;
+}
