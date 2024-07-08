@@ -4,7 +4,7 @@ body {
     background-color: white;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -71,14 +71,29 @@ header {
 }
 
 .navigation-menu-link {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
     padding: 24px 0;
-
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
+
+.navigation-menu-link.current::after { 
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    content: " ";
+} */
 
 .navigation-menu-link:hover,
 .navigation-menu-link:active,
@@ -99,6 +114,9 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -116,10 +134,13 @@ header {
     background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
-        url(./images/hero-background.jpg) ;
+        url(/images/hero-background.jpg) ;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1440px;
+    background-position: center;
     padding: 188px 0;
+    width: 1440px;;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -146,6 +167,9 @@ header {
     min-width: 169px;
     display: block;
     margin: 0 auto;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -179,11 +203,6 @@ header {
     width: calc((100% - 72px) / 4);
 }
 
-/* .feature-icon {
-    padding: 24px 100px;
-    /* border: 1px solid #8e8f99;
-    border-radius: 4px; */ 
-
 .feature-subtitle {
     margin-bottom: 8px;
     font-size: 20px;
@@ -191,6 +210,23 @@ header {
     line-height: 1.2;
     color: #2e2f42;
     letter-spacing: 0.02em;
+}
+
+.feature-icon-wrapper {
+    padding: 24px 100px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: #f4f4fd;;
+}
+
+.feature-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* ---- ---- */
@@ -220,6 +256,9 @@ header {
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-card-text {
@@ -237,46 +276,50 @@ header {
     letter-spacing: 0.02em;
 }
 
-.team-social-list {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* ---- ---- */
-
-
-/* ---- ---- */
-
-.title {
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #2e2f42;
-    margin-bottom: 8px
-}
-
-.subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #2e2f42;
-    letter-spacing: 0.02em;
-}
-
-.text {
+.team-card-position {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    margin-bottom: 8px;
+}
+
+.team-social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.team-social-list li {
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-list li:hover {
+    background-color: #404BBF;
+}
+
+.icons-team-social {
+    fill: #F4F4FD;
 }
 
 /* ---- ---- */
 
 /* ---- Portfolio ---- */
 
-.portfolio .title {
+.portfolio-title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
     margin-bottom: 72px;
 }
 
@@ -288,8 +331,31 @@ header {
     row-gap: 48px;
 }
 
-.portfolio-list-item {
-    width: calc((100% - 48px) / 3);
+.portfolio-item-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    padding: 40px 32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.portfolio-list-item:hover .portfolio-overlay-text {
+    transform: translateY(0);
 }
 
 .portfolio-card-text {
@@ -298,8 +364,33 @@ header {
     padding: 32px 16px;
 }
 
-.portfolio-card-text .subtitle {
+.portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-card-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #2e2f42;
+    letter-spacing: 0.02em;
     margin-bottom: 8px;
+}
+
+.portfolio-card-category {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* ---- ---- */
@@ -342,9 +433,31 @@ header {
 
 .footer-social-list {
     display: flex;
+    max-width: 208px;
+    justify-content: center;
+    gap: 16px;
 }
 
 .footer-container {
     display: flex;
     gap: 120px;
+}
+
+.icons-footer-social {
+    fill: #F4F4FD;
+}
+
+.footer-social-list li {
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-list li:hover {
+    background-color: #31D0AA ;
 }
