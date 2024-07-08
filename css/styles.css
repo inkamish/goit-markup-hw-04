@@ -84,7 +84,13 @@ header {
     position: relative;
 }
 
-.navigation-menu-link.current::after { 
+.navigation-menu-link:hover,
+.navigation-menu-link:active,
+.navigation-menu-link:focus {
+    color: #404BBF;
+}
+
+.navigation-menu-link.current::after {
     position: absolute;
     display: block;
     bottom: -1px;
@@ -93,12 +99,6 @@ header {
     border-radius: 2px;
     background-color: #404BBF;
     content: " ";
-} */
-
-.navigation-menu-link:hover,
-.navigation-menu-link:active,
-.navigation-menu-link:focus {
-    color: #404BBF;
 }
 
 .contacts-list {
