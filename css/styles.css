@@ -38,6 +38,9 @@ section {
 
 header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -87,7 +90,7 @@ header {
 .navigation-menu-link:hover,
 .navigation-menu-link:active,
 .navigation-menu-link:focus {
-    color: #404BBF;
+    color: #404BBF; 
 }
 
 .navigation-menu-link.current::after {
@@ -98,7 +101,7 @@ header {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    content: " ";
+    content: "";
 }
 
 .contacts-list {
@@ -136,10 +139,10 @@ header {
         rgba(46, 47, 66, 0.7)),
         url(/images/hero-background.jpg) ;
     background-repeat: no-repeat;
-    background-size: 1440px;
+    background-size: cover;
     background-position: center;
     padding: 188px 0;
-    width: 1440px;;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -213,13 +216,15 @@ header {
 }
 
 .feature-icon-wrapper {
-    padding: 24px 100px;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
     height: 112px;
     margin-bottom: 8px;
-    background-color: #f4f4fd;;
+    background-color: #f4f4fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-text {
@@ -288,6 +293,7 @@ header {
     display: flex;
     gap: 24px;
     justify-content: center;
+    align-items: center;
 }
 
 .team-social-list li {
