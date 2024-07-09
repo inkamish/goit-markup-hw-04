@@ -303,7 +303,6 @@ header {
 .team-social-item {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
 }
 
 .team-social-item-link {
@@ -319,7 +318,8 @@ header {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-item-link:hover {
+.team-social-item-link:hover,
+.team-social-item-link:focus {
     background-color: #404BBF;
 }
 
@@ -365,6 +365,7 @@ header {
     padding: 40px 32px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-size: 16px;
 
     transform: translateY(100%);
     transition-property: transform;
@@ -373,7 +374,7 @@ header {
 }
 
 .portfolio-list-item:hover .portfolio-overlay-text {
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 
 .portfolio-card-text {
@@ -420,6 +421,16 @@ header {
     padding: 100px 0;
 }
 
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-first-element {
+    margin-right: 120px;
+
+}
+
 .footer-logo {
     display: inline-block;
     margin-bottom: 16px;
@@ -453,29 +464,33 @@ header {
     display: flex;
     max-width: 208px;
     justify-content: center;
+    align-items: center;
     gap: 16px;
-}
-
-.footer-container {
-    display: flex;
-    gap: 120px;
 }
 
 .icons-footer-social {
     fill: #F4F4FD;
 }
 
-.footer-social-list li {
-    background-color: #4D5AE5;
+.footer-social-item {
     width: 40px;
     height: 40px;
+}
+
+.footer-social-item-link {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D5AE5;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-list li:hover {
+.footer-social-item-link:hover ,
+.footer-social-item-link:focus {
     background-color: #31D0AA ;
 }
